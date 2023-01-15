@@ -1,9 +1,10 @@
 import { Router } from "express";
-// import { getUser } from "../controllers/users.controller";
+import { getUser,updateUser } from "../controllers/users.controller.js";
 
 const router = Router();
 
-// router.get("/find/:userId", getUser);
+router.get("/find/:userId", getUser);
+router.put("/", updateUser);
 
 
 

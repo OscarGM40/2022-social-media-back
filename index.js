@@ -42,12 +42,14 @@ import usersRoutes from "./routes/users.routes.js";
 import postsRoutes from "./routes/posts.routes.js";
 import commentsRoutes from "./routes/comments.routes.js";
 import likesRoutes from "./routes/likes.routes.js";
+import relationshipsRoutes from "./routes/relationships.routes.js";
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/posts", postsRoutes);
 app.use("/api/comments", commentsRoutes);
 app.use("/api/likes", likesRoutes);
+app.use("/api/relationships", relationshipsRoutes);
 
 app.use((err, req, res, next) => {
   return res.status(500).json({
